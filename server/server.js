@@ -16,6 +16,7 @@ import mongoStore from 'connect-mongodb-session';
 import routes from './routes';
 
 const port = process.env.PORT || 4783;
+console.log(process.env.PORT);
 const env = process.env.NODE_ENV || 'development';
 const database = process.env.DB_NAME || 'clipboardinterview';
 
