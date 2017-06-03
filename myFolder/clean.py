@@ -5,8 +5,11 @@ from os.path import join, dirname
 import numpy as np
 from pymongo import MongoClient
 
+<<<<<<< HEAD
 from geopy.geocoders import Nominatim
 
+=======
+>>>>>>> d29e5bf838b3ed3fcb0bf38524fdfaec1a62a2ba
 df = pd.read_csv(join(dirname(__file__), '../data/projectnurse.csv'))
 
 client = MongoClient('mongodb://localhost:27017/')
@@ -18,6 +21,7 @@ db = client['clipboardinterview']
 # df.drop(["Do you have any special skills that set you apart from other nurses? (examples: CCRN, CNOR, Special Procedures, etc.)"])
 # rename header
 df.rename(index=str, columns={
+<<<<<<< HEAD
     "What (City, State) are you located in?":"location",
     "What's your highest level of education?":"education",
     "Department":"department",
@@ -35,6 +39,25 @@ df.rename(index=str, columns={
     "How did you hear about Project Nurse?":"How_did_you_hear",
     "Start Date (UTC)":"start_date_UTC",
     "Submit Date (UTC)":"submit_date_UTC"
+=======
+    'What (City, State) are you located in?':'location',
+    "What's your highest level of education?":'education',
+    "Department":'department',
+    "How's the employee turnover?":'turnover',
+    "How many years of experience do you have?":'experience',
+    "What is/was your length of orientation/training?":'training',
+    "What is the Nurse - Patient Ratio?":'nurse_patient_Ratio',
+    "What is your hourly rate ($/hr)?":'salary',
+    "What's Your Shift Length?":'Shift_length',
+    "Which Shift?":'shift_name',
+    "Other":'other',
+    "Full-Time/Part-Time?":'job_type',
+    "Do you have any special skills that set you apart from other nurses? (examples: CCRN, CNOR, Special Procedures, etc.)":'special_skills',
+    "Would you recommend your department to another nurse?":'recommoend_your_department',
+    "How did you hear about Project Nurse?":'How_did_you_hear',
+    "Start Date (UTC)":'start_date_(UTC)',
+    "Submit Date (UTC)":'submit_date_(UTC)'
+>>>>>>> d29e5bf838b3ed3fcb0bf38524fdfaec1a62a2ba
 }, inplace=True)
 
 df_bak = df.copy
@@ -42,6 +65,7 @@ df_bak = df.copy
 #convert all data to string including NaN of float
 for row in range(df.shape[0]):
     for col in df.columns:
+<<<<<<< HEAD
         df[col][row]=str(df[col][row]).lower();
 
 lat = []
@@ -60,6 +84,9 @@ def add_lat_long(df):
             lat.append(None)
             lng.append(None)
 
+=======
+        df[col][row]=str(df[col][row])
+>>>>>>> d29e5bf838b3ed3fcb0bf38524fdfaec1a62a2ba
 
 # function to clean data using regular expression
 def shape_data(df, colName, reg, df_bak):
@@ -81,10 +108,13 @@ def shape_data(df, colName, reg, df_bak):
         # df_bak = pd.read_csv('projectnurse.csv', dtype=str)
     return
 
+<<<<<<< HEAD
 # add latitude and longitude to dataframe
 add_lat_long(df)
 df['lat'] = lat
 df['lng'] = lng
+=======
+>>>>>>> d29e5bf838b3ed3fcb0bf38524fdfaec1a62a2ba
 
 # shape nurse-patient ratio
 shape_data(df, 'What is the Nurse - Patient Ratio?', '[0-9]+:[0-9]+', df_bak)
@@ -92,8 +122,14 @@ shape_data(df, 'What is the Nurse - Patient Ratio?', '[0-9]+:[0-9]+', df_bak)
 # shape wage
 shape_data(df, 'What is your hourly rate ($/hr)?', '[0-9]+\,?[0-9]+\.?[0-9]*', df_bak)
 
+<<<<<<< HEAD
 MyRecords = db['MyRecords']
 
 MyRecords.insert_many(df.to_dict('MyRecords'))
 
 # pprint(list(db.record.find()))
+=======
+db.record.insert_many(df.to_dict('records'))
+
+pprint(list(db.record.find()))
+>>>>>>> d29e5bf838b3ed3fcb0bf38524fdfaec1a62a2ba

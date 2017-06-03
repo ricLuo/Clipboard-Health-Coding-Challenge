@@ -1,5 +1,6 @@
 
 .row{
+<<<<<<< HEAD
   /*border: 1px solid;*/
   /*border-radius: 5px;*/
 }
@@ -118,4 +119,8 @@
 .keen-dashboard .return-link:focus,
 .keen-dashboard .return-link:hover {
   text-decoration: none;
+=======
+  border: 1px solid;
+  border-radius: 5px;
+>>>>>>> d29e5bf838b3ed3fcb0bf38524fdfaec1a62a2ba
 }
