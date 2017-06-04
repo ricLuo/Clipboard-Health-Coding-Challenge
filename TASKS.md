@@ -3,7 +3,7 @@ Clipboard Health Senior Engineer Interview Task
 
 ## Before you begin
 
-* rename this file to TASKS.md 
+* rename this file to TASKS.md
 * initialize an empty repository
 * add TASKS.md to a .gitignore (you may also want to add node_modules, github maintains a node gitignore [here](https://github.com/github/gitignore/blob/master/Node.gitignore))
 * push the repository to github (Make commits as you work and send me a link when you are done)
@@ -26,7 +26,7 @@ The fields you will be populating are: Wage, Patient:Nurse Ratio
 
 **Wages**: Please standardize to Hourly
 
-**Ratio**: Notice values some may be reversed, i.e. 5:1 vs 5
+**Ratio**: Notice values some may be reversed, i.e. 5:1 vs 1:5
 
 Additionally, you may also populate **Department** and **Location**.
 
@@ -98,5 +98,3 @@ Feel free to use this section as a starting point for your documentation
 ###  Developing:
 1. Set `NODE_ENV=development` in `.env`.
 2. Run `npm run dev`
-
-

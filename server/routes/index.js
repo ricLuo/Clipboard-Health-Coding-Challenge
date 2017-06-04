@@ -1,16 +1,16 @@
 /* eslint-disable global-require */
 import 'dotenv/config';
 import reactApp from './views/app';
-import Record from '../../myFolder/model/Record';
+import MyRecord from '../../myFolder/model/MyRecord';
 
 const routes = (app) => {
 
   /* example api route */
-  // app.get('/api/records', require('./api/records'));
+  app.get('/api/records', require('./api/records'));
 
   // my data records
   app.get('/api/myRecords', (req, res) => {
-    Record.find(function(err, record){
+    MyRecord.find(function(err, record){
       if(err){
         res.send(err);
       }

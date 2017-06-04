@@ -10,11 +10,7 @@ import Index from './views/Index';
 import NotFound from './views/NotFound';
 
 //my compoenent
-<<<<<<< HEAD
 import myComponent from '../myFolder/component/myComponent';
-=======
-import myComponent from '../myFolder/myComponent';
->>>>>>> d29e5bf838b3ed3fcb0bf38524fdfaec1a62a2ba
 
 // All of our CSS
 require('../public/css/main.scss');

@@ -54,8 +54,8 @@ class myComponent extends React.Component{
                   </div>
                 </div>
                 <div className="chart-notes">
-                  This is a map of Uniteds States which show the location distribution of the nurses. As per the map,
-                  most of the nurses located near the west coast.
+                  The reason that accuracy is not high is because we manually transform the coordinates to scale of the Map.
+                  For further enhancement, we could generate the map using States Topojson seperately instead of data as a whole
                 </div>
               </div>
             </div>

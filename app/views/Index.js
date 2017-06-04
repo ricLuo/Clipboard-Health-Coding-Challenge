@@ -9,10 +9,9 @@ const Index = () => (
   <Main>
     <div className="container">
       <div className="row">
-<<<<<<< HEAD
         <div className="col-sm-12 text-center" id="index">
           <h1> Welcome </h1>
-=======
+        </div>
         <div className="col-sm-12" id="index">
           <h1> Hello World </h1>
         </div>
@@ -23,7 +22,6 @@ const Index = () => (
         </div>
         <div className="col-sm-5" id="index">
           <h1> Hello World </h1>
->>>>>>> d29e5bf838b3ed3fcb0bf38524fdfaec1a62a2ba
         </div>
       </div>
     </div>

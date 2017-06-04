@@ -1,4 +1,4 @@
-import Record from './Record';
+import Record from './MyRecord';
 
 export default (req, res) => {
   Record.find().then((records) =>{
