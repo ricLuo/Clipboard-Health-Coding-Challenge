@@ -6,6 +6,7 @@ import time
 
 import geocoder
 # from geopy.geocoders import Nominatim
+# Hydrogen
 
 df = pd.read_csv(join(dirname(__file__), '../data/projectnurse.csv'))
 
@@ -121,7 +122,7 @@ def handleSalary(df, regex):
                 afterShape=afterShape
 #             print("afterShape: ",afterShape)
             if afterShape>=1000:
-#                 drop the rows where data is wrong or we cannot determine the time scale for salary
+#                 drop the 5 rows where data is wrong or we cannot determine the time scale for salary
                 df['salary'][row]=-1
             else:
                 df['salary'][row]=round(afterShape,2)
@@ -164,8 +165,8 @@ def transformLocation_2(df):
             lng.append(None)
         df[col][row]=str(df[col][row])
 
-# Because of the geocoder limits and the time consuming,
-# I saved result in text file and directly load it.
+# Because of the geocoder limits and for saving time consuming,
+# I saved results in text file and directly load it.
 def read_lng():
     with open(join(dirname(__file__), './longitude.txt')) as f:
         content = f.readlines()
@@ -197,6 +198,7 @@ handleSalary(df, '[0-9]+\,?[0-9]+\.?[0-9]*')
 # pprint(list(db.record.find()))
 # db.record.insert_many(df.to_dict('records'))
 
+# insert to db MyRecords dict form, with orient=records
 db.MyRecords.insert_many(df.to_dict('records'))
 
 client.close()
