@@ -11,6 +11,7 @@ var topojson = require('topojson');
 
 const url_1 = "https://d3js.org/us-10m.v1.json";
 
+// compute center coordinates of states in Map
 const getStateCenter = (usMap, stateCenter, path)=>{
   for(let key in usMap.features){
     if(usMap.features.hasOwnProperty(key)){
@@ -24,6 +25,7 @@ const getStateCenter = (usMap, stateCenter, path)=>{
   }
 };
 
+// get map coordinates from json file into array
 const getMapCoords = (usMap,usMapCoords)=>{
   for(var ftKey in usMap.features){
     var ft = usMap.features[ftKey];
@@ -57,6 +59,7 @@ class MapUs extends React.Component{
     // console.log("location",this.state.location);
     // console.log("salary",this.state.salary);
     // console.log("record",this.state.record);
+
     // ES do not support "this" method. Need to manually bind it.
     this.loadMap = this.loadMap.bind(this);
     this.dataLoaded = this.dataLoaded.bind(this);
@@ -70,6 +73,7 @@ class MapUs extends React.Component{
 
   }
 
+  // load topojson map of united states
   loadMap (){
     d3.json(this.state.url, this.dataLoaded);
     // console.log("data",this.state.data);

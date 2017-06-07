@@ -28,6 +28,7 @@ class myComponent extends React.Component{
     this.loadMongo();
   }
 
+  //load record data from mongo
   loadMongo(){
     axios.get("/api/myRecords")
       .then(res=>{
@@ -41,6 +42,7 @@ class myComponent extends React.Component{
       });
   }
 
+  //store data in record into react state
   handleData(record){
     const location=[];
     const salary=[];

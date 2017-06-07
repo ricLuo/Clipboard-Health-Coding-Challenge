@@ -28,26 +28,3 @@ const MyRecord = new Schema({
 
 
 export default mongoose.model('MyRecord', MyRecord);
-
-
-
-// _id
-// location
-// education
-// department
-// turnover
-// experience
-// training
-// patientNurseRatio
-// salary
-// Shift_length
-// shift_name
-// other
-// job_type
-// special_skills
-// recommoend_your_department
-// How_did_you_hear
-// start_date_UTC
-// submit_date_UTC
-// lat
-// lng
