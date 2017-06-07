@@ -15,8 +15,8 @@
 
 
 <p align="center">
-  <img src="./preliminary_results.PNG" width="350"/>
-  <img src="preliminary_results_2.PNG" width="350"/>
+  <img src="./preliminary_results.PNG" width="900"/>
+  <img src="preliminary_results_2.PNG" width="900"/>
 </p>
 
 ----------------------------------------------------Detail---------------------------------------------------------------------------
