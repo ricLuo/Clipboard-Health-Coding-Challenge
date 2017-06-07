@@ -27,7 +27,7 @@ Python:
 	2. use regular expression to retrieve data from dataframe columns.
 	3. install geocoder to obtain latitude and longitude. use time.sleep because of google api query limit. In this case, I stored the latitude and longitude in text files to load in python for saving time.
 	4. input data:  pay attention to null or, 'none' , float NaN problem.
-	5. Time and dates recognition.  2 weeks, 1 year..... I stored all the related keywords and iterate the salary data, converting to hourly salary rate. Handled dot and comma  problems in numbers. Handles multiple dimension salary problems, say 'xx/hr, satisfied with xx/yr, least expection xxx/biweek'
+	5. Time and dates recognition.  2 weeks, 1 year..... I stored all the related keywords and iterate the salary data, converting to hourly salary rate. Handled dot and comma  problems in numbers. Handles multiple dimension salary problems, say 'xx/hr, satisfied with xx/yr, least expection xxx/biweek'. You can find a draft <a src="./healthcare_challenge.html">here</a>
 	6. how to treat unexpected data.  dropped single-digit number of bad data, res-save it as -1. 
 	7. format to store data every stage of pipeline obtain data from db since we don't want to pollute the raw data
 	8. input data "salary" and "patientNurseRatio" are quit messy to handle. I would suggest to validate input nurse data in the first place, such as number check in the user interface.
