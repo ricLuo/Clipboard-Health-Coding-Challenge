@@ -31,8 +31,8 @@ Python:
 	6. how to treat unexpected data.  dropped single-digit number of bad data, res-save it as -1. 
 	7. format to store data every stage of pipeline obtain data from db since we don't want to pollute the raw data
 	8. input data "salary" and "patientNurseRatio" are quit messy to handle. I would suggest to validate input nurse data in the first place, such as number check in the user interface.
+	9. You can open the draft jupyter.html at the root folder to see some of the process
 
-You can see a draft on jupyter:<a href="./healthcare_challenge.html">here</a>
 
 React-D3
 
@@ -41,7 +41,7 @@ React-D3
 	3. store ajax data in state so when asynchronous data loaded we use setState to re-render page. handle all ajax in componentDidMount life cycle.
 	4. re-render issues: when ajax data not loaded yet, I return a different jsx page for either error or loading. Then when data in state loaded and page re-rendered , return the full page with sub-component.
 	5. store all records from database to root element <myComponent> so that every inherited sub-ele can access and we need only query data once. Neither do we have care about props change since we only load sub-component when state data loaded. No setState will be triggerred again in root component.
-	6. visualize data on the map and barchart. Only d3.chart used pure d3.js to present. others merely used d3 to manipulate math function in data.
+	6. visualize data on the map and on bar charts. Only d3chart component used pure d3.js to present. others merely used d3 to manipulate math function in data.
 	7. design dashboard
 	8. dependencies added:  axios, topojson, d3-tip
 	9. 
