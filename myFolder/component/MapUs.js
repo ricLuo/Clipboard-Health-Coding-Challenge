@@ -1,13 +1,7 @@
 import React from 'react';
 import * as d3 from 'd3';
 import Main from '../../app/layouts/Main';
-// import ReactDom from 'react-dom';
-// import axios from 'axios';
-// import topojson from 'topojson';
 var topojson = require('topojson');
-// import "../formatted.json";
-// import d3Wrap from 'react-d3-wrap';
-// import usTopo from '../usTopo';
 
 const url_1 = "https://d3js.org/us-10m.v1.json";
 

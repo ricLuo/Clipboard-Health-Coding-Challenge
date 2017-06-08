@@ -1,7 +1,6 @@
 import React from 'react';
 import * as d3 from 'd3';
 import Main from '../../app/layouts/Main';
-import ReactDom from 'react-dom';
 import Graph from './Graph';
 import MapUs from './MapUs';
 import axios from 'axios';
